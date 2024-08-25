@@ -1,0 +1,25 @@
+main()0
+{
+	xy = -5;
+	y = 4+6;
+	z = ln(6^(2))+y;
+	if(x => -5)
+	{
+		meow = 1;
+		meow = meow * 2;
+		meow = 4;
+	}
+	rawr = 0.5;
+	x = foo(rawr, 4);
+}
+
+foo(xy, z)2
+{
+	r = lN(y);
+	x = CoS(9);
+}
+
+fee(meow)
+{
+	z = 4^(2);
+}$

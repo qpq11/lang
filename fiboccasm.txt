@@ -1,0 +1,38 @@
+:main
+in
+vpop [0]
+push 0.000000
+vpop [1]
+push 1.000000
+vpop [2]
+vpush [0]
+push 0.000000
+jne :ife1
+push 0.000000
+vpop [2]
+jump :ife1
+:ife1
+jump :wh1
+:wh1
+vpush [0]
+push 2.000000
+jl :whend1
+vpush [2]
+vpop [3]
+vpush [2]
+vpush [1]
+add
+vpop [2]
+vpush [3]
+vpop [1]
+vpush [0]
+push 1.000000
+sub
+vpop [0]
+jump :wh1
+:whend1
+vpush [2]
+out
+pop
+hlt
+hlt

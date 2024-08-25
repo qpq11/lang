@@ -1,0 +1,87 @@
+:main
+in
+vpop [0]
+in
+vpop [1]
+in
+vpop [2]
+vpush [1]
+push 2.000000
+pow
+vpop [3]
+push 4.000000
+vpush [0]
+mul
+vpush [2]
+mul
+vpop [4]
+vpush [3]
+vpush [4]
+sub
+vpop [5]
+vpush [5]
+push 0.000000
+jnm :ife1
+push 0.000000
+out
+pop
+hlt
+jump :ife1
+:ife1
+vpush [5]
+sqrt
+vpop [6]
+vpush [6]
+push 0.000000
+jne :ife2
+push 1.000000
+out
+pop
+push -2.000000
+vpush [0]
+mul
+vpop [7]
+vpush [1]
+vpush [7]
+div
+vpop [8]
+vpush [8]
+out
+pop
+hlt
+jump :ife2
+:ife2
+push 2.000000
+out
+pop
+push 2.000000
+vpush [0]
+mul
+vpop [7]
+vpush [6]
+vpush [1]
+sub
+vpop [9]
+push -1.000000
+vpush [6]
+mul
+vpush [1]
+sub
+vpop [10]
+vpush [9]
+vpush [7]
+div
+vpop [11]
+vpush [10]
+vpush [7]
+div
+vpop [12]
+vpush [11]
+out
+pop
+vpush [12]
+out
+pop
+hlt
+hlt
+hlt

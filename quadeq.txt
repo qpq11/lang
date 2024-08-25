@@ -1,0 +1,49 @@
+main()
+{
+	eval: = in(a);
+	eval: = in(b);
+	eval: = in(c);
+	qd = b^(2);
+	vc = 4*a*c;
+	dq = qd - vc;
+	if(a == 0)
+	{
+		if(b == 0)
+		{
+			if(c == 0)
+			{
+				eval: = out(-1);
+				eval: = ret();
+			}
+			eval: = out(0);
+			eval: = ret();
+		}
+		eval: = out(1);
+		x0 = (-c)/b;
+		eval: = out(x0);
+		eval: = ret();
+	}
+	if(dq < 0)
+	{
+		eval: = out(0);
+		eval: = ret();
+	}
+	d = dq^(0.5);
+	if(d == 0)
+	{
+		eval: = out(1);
+		del = -2 * a;
+		x0 = b/del;
+		eval: = out(x0);
+		eval: = ret();
+	}
+	eval: = out(2);
+	del = 2 * a;
+	ch1 = d - b;
+	ch2 = -d - b;
+	x1 = ch1/del;
+	x2 = ch2/del;
+	eval: = out(x1);
+	eval: = out(x2);
+	eval: = ret();
+}$

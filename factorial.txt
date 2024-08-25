@@ -1,0 +1,34 @@
+in
+rpop ax
+rpush ax
+jz :zero
+rpush ax
+rpop bx
+call :fact
+rpush bx
+out
+hlt
+
+org 100
+:fact
+rpush ax
+push 1
+sub
+rpop ax
+rpush ax
+rpush bx
+mul
+rpop bx
+rpush ax
+push 1
+je :ret
+call :fact
+jump :ret
+
+:ret
+ret
+
+:zero
+push 1
+out
+hlt

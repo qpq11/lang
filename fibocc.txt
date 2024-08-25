@@ -1,0 +1,18 @@
+main()
+{
+	eval: = in(x);
+	fib0 = 0;
+	fib1 = 1;
+	if (x == 0)
+	{
+		fib1 = 0;
+	}
+	while (x => 2)
+	{
+		tmp = fib1;
+		fib1 = fib1 + fib0;
+		fib0 = tmp;
+		x = x - 1;
+	}
+	eval: = out(fib1);
+}$

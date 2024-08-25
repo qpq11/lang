@@ -1,0 +1,64 @@
+:main
+in
+vpop [0]
+push 1.000000
+vpop [1]
+vpush [0]
+push 0.000000
+jl :ife1
+vpush [0]
+rpop ax
+call :fibo
+rpush ax
+vpop [1]
+jmp :ife1
+:ife1
+vpush [1]
+out
+pop
+hlt
+jmp :_fibo
+
+:fibo
+rpush ax
+relpush [0]
+push 0.000000
+jne :ife2
+push 0.000000
+rpop ax
+ret
+jmp :ife2
+:ife2
+relpush [0]
+push 1.000000
+jne :ife3
+push 1.000000
+rpop ax
+ret
+jmp :ife3
+:ife3
+relpush [0]
+push 1.000000
+sub
+relpop [1]
+relpush [0]
+push 2.000000
+sub
+relpop [2]
+relpush [1]
+rpop ax
+call :fibo
+rpush ax
+relpop [3]
+relpush [3]
+relpush [2]
+rpop ax
+call :fibo
+rpush ax
+add
+relpop [3]
+relpush [3]
+rpop ax
+ret
+:_fibo
+hlt

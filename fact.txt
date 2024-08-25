@@ -1,0 +1,21 @@
+main()0
+{
+	eval: = in(x);
+	fct = 1;
+	if (x > 1)
+	{
+		fct = fact(x)1;
+	}
+	eval: = out(fct);
+}
+
+fact(x)1
+{
+	if (x == 1)
+	{
+		eval: = ret(1);
+	}
+	decr = x - 1;
+	res = x * fact(decr)1;
+	eval: = ret(res);
+}$

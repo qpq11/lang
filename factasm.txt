@@ -1,0 +1,48 @@
+:main
+in
+vpop [0]
+push 1.000000
+vpop [1]
+vpush [0]
+push 1.000000
+jnl :ife1
+vpush [0]
+rpop ax
+call :fact
+rpush ax
+vpop [1]
+jump :ife1
+:ife1
+vpush [1]
+out
+pop
+hlt
+jump :_fact
+
+:fact
+rpush ax
+relpop [0]
+relpush [0]
+push 1.000000
+jne :ife2
+push 1.000000
+rpop ax
+ret
+jump :ife2
+:ife2
+relpush [0]
+push 1.000000
+sub
+relpop [1]
+relpush [0]
+relpush [1]
+rpop ax
+call :fact
+rpush ax
+mul
+relpop [2]
+relpush [2]
+rpop ax
+ret
+:_fact
+hlt

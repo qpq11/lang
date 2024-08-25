@@ -1,0 +1,27 @@
+main()
+{
+	eval: = in(x);
+	fib = 1;
+	if (x => 0)
+	{
+		fib = fibo(x)1;
+	}
+	eval: = out(fib);
+}
+
+fibo(x)1
+{
+	if (x == 0)
+	{
+		eval: = ret(0);
+	}
+	if (x == 1)
+	{
+		eval: = ret(1);
+	}
+	f = x - 1;
+	s = x - 2;
+	res = fibo(f)1;
+	res = res + fibo(s)1;
+	eval: = ret(res);
+}$
